@@ -1,0 +1,90 @@
+name: Bug report
+description: Report a problem with the prototype or app behavior.
+title: ""
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill out the details below so the team can reproduce and fix it quickly.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Short summary
+      description: One-line description of the issue.
+      placeholder: Login button freezes after entering valid credentials
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area affected
+      options:
+        - Login
+        - Data entry
+        - Tracking / reporting
+        - UI / layout
+        - Backend / API
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact steps taken.
+      placeholder: |
+        1. Open the app
+        2. Tap Log in
+        3. Enter valid details
+        4. Submit
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: User should be able to log in and see their dashboard.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: The form stays loading and no redirect happens.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / device
+      placeholder: |
+        Browser: Chrome on Android
+        Device: Pixel 7
+        App version: prototype 1
+        Network: Wi-Fi
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or logs
+      description: Add images, console logs, or any relevant notes.
+      placeholder: Drag images here or paste relevant screenshots.
